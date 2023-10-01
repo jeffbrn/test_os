@@ -1,0 +1,10 @@
+version: "3"
+services:
+    boot-os:
+        container_name: boot-os-dev
+        build:
+            context: .
+            dockerfile: Dockerfile_bootdev
+        volumes:
+            - ..:/build
+        command: tail -f /dev/null

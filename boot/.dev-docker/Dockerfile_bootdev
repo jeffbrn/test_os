@@ -1,0 +1,10 @@
+FROM ubuntu:22.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt -qq -y update \
+	&& apt -qq -y upgrade \
+	&& apt -qq -y install build-essential nasm \
+	&& apt -qq -y install grub-common grub-pc-bin xorriso qemu-system-x86
+
+WORKDIR /build
