@@ -2,23 +2,26 @@
 
 DIY operating system
 
-## Building a boot image
+## O/S boot image
 
 ### Prerequisites
 
 Boot image is created using docker
 
-### Steps
+### Building the boot image
+
+First shell into the dev container:
 
 ```
-$ cd boot
-$ pushd .dev-docker
-$ docker compose up -d
-$ docker exec -ti boot-os-dev /bin/bash
-$ make
-$ exit
-$ docker compose down
-$ popd
+cd boot
+./run_docker.sh
+```
+
+### Building the x64 image
+
+```
+cd src/arch/x86_x64
+make
 ```
 
 ## Testing the boot image
