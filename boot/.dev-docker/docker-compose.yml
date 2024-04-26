@@ -5,6 +5,10 @@ services:
         build:
             context: .
             dockerfile: Dockerfile_bootdev
+            args:
+                USERNAME: ${USER}
+                USR_UID: ${USR_UID}
+                USR_GID: ${USR_GID}
         volumes:
             - ..:/build
         command: tail -f /dev/null
