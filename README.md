@@ -44,7 +44,13 @@ $ qemu-system-x86_64 -cdrom build/os-x86_64.iso
 
 You can also test the boot image using VMWare by creating a VM based on a generic linux and using the file 'build/os-x86_64.iso' to boot from
 
+## Miscellaneous
+
+-   interrogate generated image file: file kernel.img
+-   disk info: fdisk -lu kernel.img
+
 ## References
 
 -   [A minimal Multiboot Kernel](https://os.phil-opp.com/multiboot-kernel/)
 -   [EFI fix on WSL](https://github.com/microsoft/WSL/issues/1043)
+-   [QEMU](https://www.qemu.org/docs/master/)

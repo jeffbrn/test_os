@@ -1,5 +1,7 @@
 # build artifacts
 build/
+*.o
+*.img
 
 # docker artifacts
 .env
